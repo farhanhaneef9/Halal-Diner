@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/icon" href="image/images.jpeg">
+    <title>Halal Diner - Experience Our Ambiance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Section styles */
+        section {
+            padding: 6rem 5%;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Gallery styles */
+        .ambiance-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 300px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Dining area sections */
+        .dining-section {
+            margin-bottom: 6rem;
+            position: relative;
+        }
+        
+        .dining-section:nth-child(odd) {
+            background-color: #fff;
+            padding: 5rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .dining-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .dining-content.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .dining-text {
+            flex: 1;
+        }
+        
+        .dining-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .dining-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dining-image::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #d4af37;
+            border-radius: 8px;
+            top: 15px;
+            left: 15px;
+            z-index: -1;
+        }
+        
+        /* Decorative elements */
+        .decorative-pattern {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+          
+            opacity: 0.5;
+            z-index: -1;
+        }
+        
+        .pattern-1 {
+            top: 10%;
+            left: 5%;
+        }
+        
+        .pattern-2 {
+            bottom: 10%;
+            right: 5%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="#" class="logo">Halal Diner</a>
+        <nav class="navbar">
+            <a href="inde.html">Home</a>
+            <a href="menu.html">Food</a>
+            <a href="about.html">About Us</a>
+            <a href="show.html">Ambiance</a>
+            <a href="contact.html">Contact Info</a>
+            <a href="reservation.html">Reservation</a>   
+        </nav>
+    </header>
+
+
+
+    <!-- Ambiance Gallery Section -->
+    <section id="explore">
+        <div class="container text-center">
+            <h1>Our Dining Atmosphere</h1>
+            <p>From cozy dining areas to elegant decor, every corner of our restaurant is crafted to enhance your dining experience. Join us and feel the warmth of our hospitality.</p>
+            
+            <div class="ambiance-gallery">
+                <div class="gallery-item">
+                    <img src="image/cozi.avif" alt="Cozy Dining Area">
+                </div>
+                <div class="gallery-item">
+                    <img src="image/ele.webp" alt="Elegant Decor">
+                </div>
+                <div class="gallery-item">
+                    <img src="image/warm.jpg" alt="Warm Lighting">
+                </div>
+            </div>
+        </div>
+        
+        <div class="decorative-pattern pattern-1"></div>
+        <div class="decorative-pattern pattern-2"></div>
+    </section>
+
+    <!-- Candlelight Table Section -->
+    <section class="dining-section">
+        <div class="container">
+            <div class="dining-content">
+                <div class="dining-text">
+                    <h2>Candlelight Dining Experience</h2>
+                    <p>Indulge in a romantic evening with our candlelight dining setup. Perfect for special occasions, our tables are adorned with soft lighting and elegant decor to create an intimate atmosphere.</p>
+                    <p>Our attentive staff ensures that every detail is perfect, from the placement of the candles to the selection of music, creating the ideal setting for a memorable evening.</p>
+                </div>
+                <div class="dining-image">
+                    <img src="image/can.jpg" alt="Candlelight Table Setup">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Area Section -->
+    <section class="dining-section">
+        <div class="container">
+            <div class="dining-content reverse">
+                <div class="dining-text">
+                    <h2>Family Dining Area</h2>
+                    <p>Our family area is designed for comfort and togetherness. Enjoy a spacious setting where families can gather and create lasting memories over delicious meals.</p>
+                    <p>With comfortable seating arrangements and a warm, welcoming atmosphere, our family dining area is perfect for celebrations, gatherings, or simply enjoying quality time with loved ones.</p>
+                </div>
+                <div class="dining-image">
+                    <img src="image/fam.jpg" alt="Family Dining Area">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outdoor Dining Section -->
+    <section class="dining-section">
+        <div class="container">
+            <div class="dining-content">
+                <div class="dining-text">
+                    <h2>Outdoor Dining Area</h2>
+                    <p>Enjoy the fresh air and natural surroundings in our beautifully arranged outdoor dining space, ideal for a relaxed and scenic meal.</p>
+                    <p>Our outdoor terrace offers a serene environment with lush greenery and comfortable seating, allowing you to savor your meal while enjoying the pleasant weather and natural beauty.</p>
+                </div>
+                <div class="dining-image">
+                    <img src="image/out.jpg" alt="Outdoor Dining Area">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Indoor Dining Section -->
+    <section class="dining-section">
+        <div class="container">
+            <div class="dining-content reverse">
+                <div class="dining-text">
+                    <h2>Indoor Dining Area</h2>
+                    <p>Our indoor dining area combines elegance and comfort with modern decor and cozy lighting for a refined dining experience.</p>
+                    <p>The carefully curated interior features tasteful decorations, comfortable seating, and ambient lighting that creates the perfect atmosphere for enjoying our exquisite halal cuisine.</p>
+                </div>
+                <div class="dining-image">
+                    <img src="image/in.jpg" alt="Indoor Dining Area">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Dining Section -->
+    <section class="dining-section">
+        <div class="container">
+            <div class="dining-content">
+                <div class="dining-text">
+                    <h2>Private Dining Rooms</h2>
+                    <p>For exclusive events or quiet gatherings, our private rooms offer personalized service and a luxurious ambiance.</p>
+                    <p>Our private dining spaces can be customized to suit your specific needs, whether you're hosting a business meeting, celebrating a special occasion, or simply seeking a more intimate dining experience.</p>
+                </div>
+                <div class="dining-image">
+                    <img src="image/pri.jpg" alt="Private Dining Room">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3> Halal Diner</h3>
+                    <p>The cuisine of India is one of the world's most diverse cuisines, characterized by its sophisticated and subtle use of the many spices, vegetables, meats, grains and fruits grown across India.</p>
+                    <div class="share">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                    </div>
+                </div>
+                
+                <div class="box-container">
+                <div class="box">
+                    <h3>Contact Info</h3>
+                <a href="#" class="links"><i class="fa fa-phone"></i>+91 7818247869</a>
+                <a href="#" class="links"><i class="fa fa-phone"></i>+91 9459396156</a>
+                <a href="#" class="links"><i class="fa fa-envelope"></i>Halaldiner@gmail.com</a>
+                <a href="#" class="links"><i class="fa fa-map-marker"></i>NY,US</a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 11:00 AM - 10:00 PM</p>
+                <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                <a href="reservation.html" class="btn">Make a Reservation</a>
+            </div>
+        </div>
+        </div>
+        
+        <div class="credit"> All Rights Reserved</div>
+        </section>
+    </footer>
+
+
+    <!-- Font Awesome Script -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- Simple scroll effect script -->
+    <script>
+        // Change header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(44, 35, 29, 0.95)';
+                header.style.padding = '0.8rem 5%';
+            } else {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+                header.style.padding = '1.2rem 5%';
+            }
+        });
+    </script>
+</body>
+</html>

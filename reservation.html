@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/icon" href="image/images.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Halal Diner - Reservation</title>
+    
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Halal Diner</a>
+        <nav class="navbar">
+            <a href="inde.html">Home</a>
+            <a href="menu.html">Food</a>
+            <a href="about.html">About Us</a>
+            <a href="show.html">Ambiance</a>
+            <a href="contact.html">Contact Info</a>
+            <a href="reservation.html">Reservation</a>
+        
+           
+        </nav>
+        <div class="auth-buttons">
+            <a class="btn btn-outline-primary" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+    
+        </div>
+    </header>
+<section>
+    <main class="container">
+        <form class="reservation-form" action="server.php" method="POST" onsubmit="return validateForm()">
+
+            <h2>Make a Reservation</h2>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <select id="guests" name="guests" required>
+                    <option value="">Select number of guests</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+                            <!-- Dining Style Selection -->
+                            <div class="form-group">
+                                <label for="dining-style">Choose your preferred dining style:</label>
+                                <select id="dining-style" name="dining-style" required>
+                                    <option value="">Select Dining Style</option>
+                                    <option value="indoor">Indoor Dining</option>
+                                    <option value="outdoor">Outdoor Dining</option>
+                                    <option value="private">Private Dining</option>
+                                </select>
+                            </div>
+            
+                            <!-- Candlelight or Family Dining Option -->
+                            <div class="form-group">
+                                <label for="dining-type">Select Dining Type:</label>
+                                <select id="dining-type" name="dining-type" required>
+                                    <option value="">Select Dining Type</option>
+                                    <option value="candlelight">Candlelight Dinner</option>
+                                    <option value="family">Family Dining</option>
+                                </select>
+                            </div>
+            
+                            <div class="auth-buttons">
+                                <button class="btn btn-outline-primary">Make Reservation</button>
+                            </div>
+                        </form>
+                    </main>
+                </section>
+     
+           </div>
+        </form>
+    </section>
+        <footer>
+            <section class="footer">
+                <div class="box-container">
+                    <div class="box">
+                        <h3> Halal Diner</h3>
+                        <p>The cuisine of India is one of the world's most diverse cuisines, characterized by its sophisticated and subtle use of the many spices, vegetables, meats, grains and fruits grown across India.</p>
+                        <div class="share">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="box-container">
+                    <div class="box">
+                        <h3>Contact Info</h3>
+                    <a href="#" class="links"><i class="fa fa-phone"></i>+91 7818247869</a>
+                    <a href="#" class="links"><i class="fa fa-phone"></i>+91 9459396156</a>
+                    <a href="#" class="links"><i class="fa fa-envelope"></i>Halaldiner@gmail.com</a>
+                    <a href="#" class="links"><i class="fa fa-map-marker"></i>NY,US</a>
+                    </div>
+                </div>
+                <div class="footer-box">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday: 11:00 AM - 10:00 PM</p>
+                    <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                    <a href="reservation.html" class="btn">Make a Reservation</a>
+                </div>
+            </div>
+            </div>
+            
+            <div class="credit"> All Rights Reserved</div>
+            </section>
+        </footer>
+    
+        
+
+    <script>
+        function validateForm() {
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            
+            const selectedDateTime = new Date(date + ' ' + time);
+            const now = new Date();
+
+            if (selectedDateTime < now) {
+                alert('Please select a future date and time');
+                return false;
+            }
+
+            // Add success message
+            alert('Reservation submitted successfully!');
+            return true;
+        }
+
+        // Set min date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+    </script>
+    </main>
+    
+</body>
+</html>
